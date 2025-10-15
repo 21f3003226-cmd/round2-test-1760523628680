@@ -1,44 +1,35 @@
-# Simple Calculator App
+# Web Calculator
 
 ## Description
-The Simple Calculator App is a web-based application designed to perform basic arithmetic operations, specifically addition and subtraction. Built with modern web technologies, this application provides an intuitive user interface for performing calculations efficiently.
+Web Calculator is a simple yet powerful web-based application that allows users to perform basic arithmetic calculations. With its intuitive interface, users can easily add, subtract, multiply, and divide numbers. This application has recently been updated to include multiplication and division operations, enhancing its functionality and usability.
 
 ## Features
-- User-friendly interface for easy navigation and operation.
-- Supports addition and subtraction of two numbers.
-- Real-time calculation results displayed instantly.
-- Responsive design for compatibility across devices (desktop, tablet, mobile).
+- User-friendly interface
+- Basic arithmetic operations: addition, subtraction, multiplication, and division
+- Real-time calculation results
+- Responsive design for optimal performance on various devices
 
 ## Setup Instructions
-1. **Clone the Repository**:  
-   Open your terminal and run the following command to clone the repository:
+1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/simple-calculator.git
+   git clone https://github.com/yourusername/web-calculator.git
    ```
-   
-2. **Navigate to the Project Directory**:  
-   Change your current directory to the project folder:
+2. Navigate to the project directory:
    ```
-   cd simple-calculator
+   cd web-calculator
    ```
-
-3. **Open the Application**:  
-   Open the `index.html` file in your web browser to view and interact with the calculator.
+3. Open the `index.html` file in your web browser to run the application.
 
 ## Usage Guide
-1. Enter the first number in the designated input field.
-2. Select either the addition (+) or subtraction (-) operation.
-3. Enter the second number in the second input field.
-4. Click the "Calculate" button to see the result displayed below the inputs.
+1. Enter numbers in the input fields.
+2. Select the desired operation (addition, subtraction, multiplication, or division).
+3. Click the "Calculate" button to see the result.
+4. Clear the input fields to perform another calculation.
 
 ## Code Explanation
-- **HTML Structure**: The application is structured with a simple HTML layout that includes input fields for numbers and buttons for operations.
-- **CSS Styles**: Basic styling is included to enhance the user experience, ensuring the calculator is visually appealing and easy to use.
-- **JavaScript Logic**: 
-  - Event listeners are attached to the buttons to capture user input and trigger calculations.
-  - The addition and subtraction functions handle the arithmetic operations and update the displayed result dynamically.
-  
-This modular approach allows for easy extension of features, such as adding more operations in the future.
+- **HTML Structure**: The `index.html` file contains the basic layout of the calculator, including input fields for numbers and buttons for operations.
+- **JavaScript Logic**: The `calculator.js` file handles the logic for performing calculations. The newly added functions for multiplication (`multiply()`) and division (`divide()`) allow users to perform these operations seamlessly.
+- **Event Listeners**: Each operation button has an associated event listener that calls the respective function when clicked, updating the display with the result.
 
 ## License
 This project is licensed under the MIT License.
