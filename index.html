@@ -1,0 +1,119 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+    .calculator {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      width: 300px;
+      text-align: center;
+    }
+    .calculator h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+    }
+    .calculator input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .calculator button {
+      width: 48%;
+      padding: 10px;
+      margin: 10px 1%;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4caf50;
+      color: #fff;
+      transition: background-color 0.3s ease;
+    }
+    .calculator button:hover {
+      background-color: #45a049;
+    }
+    .calculator button.subtract {
+      background-color: #f44336;
+    }
+    .calculator button.subtract:hover {
+      background-color: #e31b1b;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+    @media (max-width: 400px) {
+      .calculator {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h1>Calculator</h1>
+    <input type="number" id="num1" placeholder="Enter first number" aria-label="First number">
+    <input type="number" id="num2" placeholder="Enter second number" aria-label="Second number">
+    <button id="addBtn">Add</button>
+    <button id="subBtn" class="subtract">Subtract</button>
+    <div class="result" id="result" aria-live="polite"></div>
+  </div>
+  <script>
+    document.getElementById('addBtn').addEventListener('click', function() {
+      const num1 = parseFloat(document.getElementById('num1').value);
+      const num2 = parseFloat(document.getElementById('num2').value);
+      const result = document.getElementById('result');
+
+      if (isNaN(num1) || isNaN(num2)) {
+        result.textContent = 'Please enter valid numbers.';
+        result.style.color = 'red';
+      } else {
+        result.textContent = `Result: ${num1 + num2}`;
+        result.style.color = 'green';
+      }
+    });
+
+    document.getElementById('subBtn').addEventListener('click', function() {
+      const num1 = parseFloat(document.getElementById('num1').value);
+      const num2 = parseFloat(document.getElementById('num2').value);
+      const result = document.getElementById('result');
+
+      if (isNaN(num1) || isNaN(num2)) {
+        result.textContent = 'Please enter valid numbers.';
+        result.style.color = 'red';
+      } else {
+        result.textContent = `Result: ${num1 - num2}`;
+        result.style.color = 'green';
+      }
+    });
+
+    // Handle URL parameters
+    const queryParams = new URLSearchParams(window.location.search);
+    if (queryParams.has('url')) {
+      alert(`URL parameter found: ${queryParams.get('url')}`);
+    }
+  </script>
+</body>
+</html>
+```
